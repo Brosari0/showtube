@@ -117,9 +117,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
-YOUTUBE_SEARCH_URL = 'https://www.googleapis.com/youtube/v3/search'
+LOGIN_REDIRECT_URL = '/posts/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
