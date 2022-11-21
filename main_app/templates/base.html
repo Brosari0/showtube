@@ -16,9 +16,14 @@
         <nav>
             <div class="nav-wrapper">
             <ul>
+                {% if user.is_authenticated %}
                 <li>About</li>
                 <li>Index</li>
+                <li><a href="{% url 'logout' %}">Log Out</a></li>
+                {% else %}
                 <li><a href="{% url 'login' %}">Log In</a></li>
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                {% endif %}
             </ul>
         </div>
         </nav>
