@@ -7,12 +7,13 @@ def home(request):
     return render(request,'home.html')
 
 def signup(request):
+    error_message = ''
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect(request, 'home.html')
+            return redirect('home')
         else:
             error_message = 'Invalid sign up - Try again'
     form = UserCreationForm()
