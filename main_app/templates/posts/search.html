@@ -2,7 +2,10 @@
 {% block content %}
 
 <h1>Search Results</h1>
+{% for video in videos %}
 
-{{ videos }}
 
+ <iframe src="{{ video.url }}" frameborder="0"></iframe>
+
+{% endfor %}
 {% endblock %}

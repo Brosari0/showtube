@@ -24,9 +24,20 @@ def signup(request):
     return render(request, 'registration/signup.html', context)       
     
 def search(request):
-    print(DEVELOPER_KEY)
+    videos = []
     query = request.GET.get('search')
     search_url = 'https://www.googleapis.com/youtube/v3/search'
     response = requests.get(f"{search_url}?query={query}&key={DEVELOPER_KEY}").json()
     print(response)
-    return render(request, 'posts/search.html', {'videos': response})
+
+
+    results = response['items']
+
+    for result in results:   
+        video_data = {
+            'url': f'https://www.youtube.com/embed?v={ result["id"]["videoId"] }',
+        }
+        videos.append(video_data)  
+    print(videos)
+    
+    return render(request, 'posts/search.html', {'videos': videos})
