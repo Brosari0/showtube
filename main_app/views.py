@@ -38,3 +38,4 @@ class CreatePost(CreateView):
         form.instance.user = self.request.user
     # Let the CreateView do its job as usual (saving the object and redirecting)
         return super().form_valid(form)
+
