@@ -32,7 +32,6 @@ def signup(request):
 class CreatePost(CreateView):
     model = Post
     fields = ['title', 'description', 'youtube_url']
-    
     def form_valid(self, form):
     # Assign the logged in user (self.request.user)
         form.instance.user = self.request.user
@@ -41,12 +40,15 @@ class CreatePost(CreateView):
 
 def posts_index(request):
   posts = Post.objects.filter(user=request.user)
+  for post in posts:
+    post.youtube_url = post.youtube_url.replace('watch?v=', 'embed/')
   return render(request, 'posts/index.html', {
     'posts': posts
   })
 
 def posts_detail(request, post_id):
     post = Post.objects.get(id=post_id)
+    post.youtube_url = post.youtube_url.replace('watch?v=', 'embed/')
     return render(request, 'posts/detail.html', {
         'post': post
     })
