@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Cat List</h1>
+<h1>Videos</h1>
 
-{% for video in posts %}
-  <a href="{% url 'detail' video.id %}">
+{% for post in posts %}
+  <a href="{% url 'detail' post.id %}">
     <div class="card">
       <div class="card-content">
-        <span class="card-title">{{ video.title }}</span>
-        <p>user: {{ video.user }}</p>
-        <p>Description: {{ video.description|linebreaks }}</p>
-        <iframe src="{{ video.youtube_url }}" frameborder="0"></iframe>
-        <div>{{ video.date }}</div>
-      </div>
+        <span class="card-title">{{ post.title }}</span>
+        <p>user: {{ post.user }}</p>
+        <iframe width="560" height="315" src="{{ post.youtube_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>Description: {{ post.description|linebreaks }}</p>
+        <div>{{ post.date }}</div>
     </div>
-  </a>
+</div>
+</a>
 {% endfor %}
 
 {% endblock %}
