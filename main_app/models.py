@@ -6,6 +6,8 @@ from datetime import datetime
 
 
 # Create your models here.
+
+
 class Post(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
@@ -22,3 +24,15 @@ class Post(models.Model):
     class Meta:
         ordering = ['-date']
 
+
+class Comment(models.Model):
+    content = models.TextField(max_length=500, blank=True)
+    date = models.DateField('Post Date', default=datetime.now)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.content
+
+    class Meta:
+        ordering = ['-date']

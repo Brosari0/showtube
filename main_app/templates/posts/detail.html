@@ -1,8 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-<div>
+<div class="card">
     {{ post.title }}
     <iframe width="560" height="315" src="{{ post.youtube_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <ul>
+        {% for comment in comments %}
+        <li>
+            {{ comment.content}}
+        </li>
+        {% endfor %}
+    </ul>
+    <form action="{% url 'comment' post.id %}">
+        <input type="text">
+        <input type="submit" value="Leave a comment">
+    </form>
 </div>
 
 {% endblock %}
