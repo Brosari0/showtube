@@ -39,3 +39,14 @@ class CreatePost(CreateView):
     # Let the CreateView do its job as usual (saving the object and redirecting)
         return super().form_valid(form)
 
+def posts_index(request):
+  posts = Post.objects.filter(user=request.user)
+  return render(request, 'posts/index.html', {
+    'posts': posts
+  })
+
+def posts_detail(request, post_id):
+    post = Post.objects.get(id=post_id)
+    return render(request, 'posts/detail.html', {
+        'post': post
+    })

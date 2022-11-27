@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+    {{ post.title }}
+    <iframe src="{{ post.youtube_url }}" frameborder="0"></iframe>
+</div>
+
+{% endblock %}
