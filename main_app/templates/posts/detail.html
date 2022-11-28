@@ -8,7 +8,9 @@
     <ul>
         {% for comment in comments %}
         <li>
-            {{ comment.content}}
+            {{ comment.content }}
+            <a href="{% url 'comment_update' post.id comment.id %}">Update</a>
+            <a href="{% url 'comment_delete' post.id comment.id %}">Delete</a>
         </li>
         {% endfor %}
     </ul>
