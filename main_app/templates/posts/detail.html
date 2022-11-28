@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="card">
-    {{ post.title }}
-    <iframe width="560" height="315" src="{{ post.youtube_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="card-content">
+    <div class="card-title">{{ post.title }}</div>
+    <iframe width="560" height="315" src="{{ post.youtube_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
     
     {% if post.user == request.user %}
-    <a href="{% url 'post_update' post.id %}">Update</a>
+    <a href="{% url 'post_update' post.id %}">Edit</a>
+   <span>|</span>
     <a href="{% url 'post_delete' post.id %}">Delete</a>
     {% endif %}
     <ul>
@@ -14,7 +16,9 @@
         <li>
             {{ comment.content }}
             {% if comment.user == request.user %}
-            <a href="{% url 'comment_update' post.id comment.id %}">Update</a>
+           
+            <a href="{% url 'comment_update' post.id comment.id %}">Edit</a>
+            <span>|</span>
             <a href="{% url 'comment_delete' post.id comment.id %}">Delete</a>
             {% endif %}
         </li>
@@ -25,6 +29,7 @@
         <input id="content" type="text" name="content">
         <input type="submit" value="Leave a comment">
     </form>
+    </div>
 </div>
 
 {% endblock %}
