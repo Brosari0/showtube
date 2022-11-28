@@ -11,8 +11,6 @@ from django.views.generic import ListView, DetailView
 from .forms import CommentForm
 
 
-
-DEVELOPER_KEY = os.environ['DEVELOPER_KEY']
 # Create your views here.
 def home(request):
     return render(request,'home.html')

@@ -12,7 +12,7 @@
         </li>
         {% endfor %}
     </ul>
-    <form action="{% url 'comment' post.id %}">
+    <form action="{% url 'comment' post.id %}" method="POST">
         {% csrf_token %}
         <input id="content" type="text" name="content">
         <input type="submit" value="Leave a comment">
