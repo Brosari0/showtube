@@ -16,9 +16,9 @@
         <nav>
             <div class="nav-wrapper">
             <ul>
+                <li><a href="{% url 'index' %}">Index</a></li>
                 {% if user.is_authenticated %}
                 <li><a href="">Home</a></li>
-                <li><a href="{% url 'index' %}">Index</a></li>
                 <li><a href="{% url 'create_post' %}">Create Post</a></li>
                 <li><a href="{% url 'reactions_index' %}">View All Reactions</a></li>
                 <li><a href="{% url 'create_reaction' %}">Create Reactions</a></li>
