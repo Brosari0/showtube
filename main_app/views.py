@@ -5,6 +5,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from .models import Post, Comment, Reaction
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView, DetailView
 from .forms import CommentForm
 
@@ -27,7 +29,7 @@ def signup(request):
     context = {'form': form, 'error_message': error_message}
     return render(request, 'registration/signup.html', context)       
     
-class CreatePost(CreateView):
+class CreatePost(LoginRequiredMixin,CreateView):
     model = Post
     fields = ['title', 'description', 'youtube_url']
     def form_valid(self, form):
@@ -36,16 +38,18 @@ class CreatePost(CreateView):
     # Let the CreateView do its job as usual (saving the object and redirecting)
         return super().form_valid(form)
     
-class PostUpdate(UpdateView):
+class PostUpdate(LoginRequiredMixin, UpdateView):
     model = Post
     fields = ['title', 'description', 'youtube_url']
 
-class PostDelete(DeleteView):
+class PostDelete(LoginRequiredMixin, DeleteView):
     model = Post
     success_url = '/posts/index'
-
+    
+@login_required
 def add_comment(request, post_id):
     form = CommentForm(request.POST)
+    
     if form.is_valid():
         comment = form.save(commit=False)
         data = form.cleaned_data
@@ -55,16 +59,16 @@ def add_comment(request, post_id):
         comment.save()
     return redirect('detail', post_id=post_id)
 
-class CommentUpdate(UpdateView):
+class CommentUpdate(LoginRequiredMixin, UpdateView):
     model = Comment
     fields = ['content']
 
-class CommentDelete(DeleteView):
+class CommentDelete(LoginRequiredMixin, DeleteView):
     model = Comment
     success_url = '/posts/'
 
 def posts_index(request):
-  posts = Post.objects.filter(user=request.user)
+  posts = Post.objects.all()
   for post in posts:
     post.youtube_url = post.youtube_url.replace('watch?v=', 'embed/')
   return render(request, 'posts/index.html', {
@@ -83,17 +87,17 @@ def posts_detail(request, post_id):
 class ReactionList(ListView):
     model = Reaction
 
-class CreateReaction(CreateView):
+class CreateReaction(LoginRequiredMixin, CreateView):
     model = Reaction
     fields = '__all__'
 
-class ReactionDetail(DetailView):
+class ReactionDetail(LoginRequiredMixin, DetailView):
     model = Reaction
 
-class ReactionUpdate(UpdateView):
+class ReactionUpdate(LoginRequiredMixin, UpdateView):
     model = Reaction
     fields = '__all__'
 
-class ReactionDelete(DeleteView):
+class ReactionDelete(LoginRequiredMixin, DeleteView):
     model = Reaction
     success_url = '/reactions'
