@@ -5,8 +5,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 import googleapiclient.discovery 
 import googleapiclient.errors
-from .models import Post, Comment
+from .models import Post, Comment, Reaction
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView
 from .forms import CommentForm
 
 
@@ -75,3 +76,12 @@ def posts_detail(request, post_id):
         'comments': comments
     })
 
+class ReactionList(ListView):
+    model = Reaction
+
+class CreateReaction(CreateView):
+    model = Reaction
+    fields = '__all__'
+
+class ReactionDetail(DetailView):
+    model = Reaction
