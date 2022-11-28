@@ -10,7 +10,8 @@
         <img src="{{ reaction.url }}" alt="😢 Could not load reaction 😢">
       </div>
       <div class="card-action">
-
+        <a href="{% url 'reactions_update' reaction.id %}">Edit</a>
+        <a href="{% url 'reactions_delete' reaction.id %}">Delete</a>
       </div>
     </div>
   </div>

@@ -21,6 +21,7 @@ class Post(models.Model):
     description = models.TextField(null=True, blank=True)
     youtube_url = models.URLField(max_length=255, null=True, blank=True)
     date = models.DateField('Post Date', default=datetime.now)
+    reactions = models.ManyToManyField(Reaction)
 
     def get_absolute_url(self):
         return reverse('detail', kwargs={'post_id':self.id})
