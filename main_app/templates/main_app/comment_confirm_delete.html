@@ -7,7 +7,7 @@
 
   <form action="" method="POST">
     {% csrf_token %}
-    <input type="submit" value="Yes - Delete!" class="btn">
+    <input type="submit" name="next" value="Yes - Delete!" class="btn">
     <a href="{% url 'detail' comment.post.id %}">Cancel</a>
   </form>
 {% endblock %}

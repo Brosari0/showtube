@@ -3,13 +3,17 @@
 <div class="card">
     {{ post.title }}
     <iframe width="560" height="315" src="{{ post.youtube_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    
+    {% if post.user == request.user %}
     <a href="{% url 'post_update' post.id %}">Update</a>
     <a href="{% url 'post_delete' post.id %}">Delete</a>
+    {% endif %}
     <ul>
         {% for comment in comments %}
         <li>
             {{ comment.content }}
-            {% if request.user.id == post.user.id %}
+            {% if comment.user == request.user %}
             <a href="{% url 'comment_update' post.id comment.id %}">Update</a>
             <a href="{% url 'comment_delete' post.id comment.id %}">Delete</a>
             {% endif %}
