@@ -3,8 +3,6 @@ import json, os
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
-import googleapiclient.discovery 
-import googleapiclient.errors
 from .models import Post, Comment, Reaction
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
@@ -56,6 +54,14 @@ def add_comment(request, post_id):
         comment.user_id = request.user.id
         comment.save()
     return redirect('detail', post_id=post_id)
+
+class CommentUpdate(UpdateView):
+    model = Comment
+    fields = ['content']
+
+class CommentDelete(DeleteView):
+    model = Comment
+    success_url = '/posts/'
 
 def posts_index(request):
   posts = Post.objects.filter(user=request.user)
