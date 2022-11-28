@@ -85,3 +85,11 @@ class CreateReaction(CreateView):
 
 class ReactionDetail(DetailView):
     model = Reaction
+
+class ReactionUpdate(UpdateView):
+    model = Reaction
+    fields = '__all__'
+
+class ReactionDelete(DeleteView):
+    model = Reaction
+    success_url = '/reactions'

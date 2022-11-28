@@ -15,4 +15,6 @@ urlpatterns = [
     path('reactions/', views.ReactionList.as_view(), name='reactions_index'),
     path('reactions/<int:pk>/', views.ReactionDetail.as_view(), name='reactions_detail'),
     path('reactions/create/', views.CreateReaction.as_view(), name='create_reaction'),
+    path('reactions/<int:pk>/update', views.ReactionUpdate.as_view(), name='reactions_update'),
+    path('reactions/<int:pk>/delete', views.ReactionDelete.as_view(), name='reactions_delete'),
 ]
