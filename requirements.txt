@@ -19,7 +19,6 @@ httplib2==0.21.0
 idna==3.4
 jmespath==1.0.1
 oauthlib==3.2.2
-prelude==5.2.0
 protobuf==4.21.9
 psycopg2-binary==2.9.5
 pyasn1==0.4.8
