@@ -6,7 +6,7 @@ from django.contrib.auth import login
 import googleapiclient.discovery 
 import googleapiclient.errors
 from .models import Post, Comment
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .forms import CommentForm
 
 
@@ -38,14 +38,24 @@ class CreatePost(CreateView):
         form.instance.user = self.request.user
     # Let the CreateView do its job as usual (saving the object and redirecting)
         return super().form_valid(form)
+    
+class PostUpdate(UpdateView):
+    model = Post
+    fields = ['title', 'description', 'youtube_url']
+
+class PostDelete(DeleteView):
+    model = Post
+    success_url = '/posts/index'
 
 def add_comment(request, post_id):
     form = CommentForm(request.POST)
     if form.is_valid():
-        new_comment = form.save(commit=False)
-        new_comment.post_id = post_id
-        new_comment.user_id = request.user.id
-        new_comment.save()
+        comment = form.save(commit=False)
+        data = form.cleaned_data
+        comment.content = data['content']
+        comment.post_id = post_id
+        comment.user_id = request.user.id
+        comment.save()
     return redirect('detail', post_id=post_id)
 
 def posts_index(request):
