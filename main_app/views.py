@@ -65,7 +65,8 @@ class CommentUpdate(LoginRequiredMixin, UpdateView):
 
 class CommentDelete(LoginRequiredMixin, DeleteView):
     model = Comment
-    success_url = '/posts/index'
+    def get_success_url(self):
+        return f"/posts/{self.object.post.id}"
 
 def posts_index(request):
   posts = Post.objects.all()
