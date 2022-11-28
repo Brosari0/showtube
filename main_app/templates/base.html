@@ -20,6 +20,8 @@
                 <li><a href="">Home</a></li>
                 <li><a href="{% url 'index' %}">Index</a></li>
                 <li><a href="{% url 'create_post' %}">Create Post</a></li>
+                <li><a href="{% url 'reactions_index' %}">View All Reactions</a></li>
+                <li><a href="{% url 'create_reaction' %}">Create Reactions</a></li>
                 <li><a href="{% url 'logout' %}">Log Out</a></li>
                 {% else %}
                 <li><a href="{% url 'login' %}">Log In</a></li>

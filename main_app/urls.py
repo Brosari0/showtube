@@ -11,4 +11,8 @@ urlpatterns = [
     path('posts/<int:pk>/delete/', views.PostDelete.as_view(), name='post_delete'),
 
     path('posts/<int:post_id>/comment/', views.add_comment, name='comment'),
+
+    path('reactions/', views.ReactionList.as_view(), name='reactions_index'),
+    path('reactions/<int:pk>/', views.ReactionDetail.as_view(), name='reactions_detail'),
+    path('reactions/create/', views.CreateReaction.as_view(), name='create_reaction'),
 ]
