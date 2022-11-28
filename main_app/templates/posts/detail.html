@@ -3,6 +3,8 @@
 <div class="card">
     {{ post.title }}
     <iframe width="560" height="315" src="{{ post.youtube_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <a href="{% url 'post_update' post.id %}">Update</a>
+    <a href="{% url 'post_delete' post.id %}">Delete</a>
     <ul>
         {% for comment in comments %}
         <li>
@@ -11,7 +13,8 @@
         {% endfor %}
     </ul>
     <form action="{% url 'comment' post.id %}">
-        <input type="text">
+        {% csrf_token %}
+        <input id="content" type="text" name="content">
         <input type="submit" value="Leave a comment">
     </form>
 </div>
