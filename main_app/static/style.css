@@ -1,4 +1,5 @@
 * {
+
 }
 
 nav {
@@ -34,6 +35,7 @@ body {
     -webkit-animation: Background 25s ease infinite;
     -moz-animation: Background 25s ease infinite;
     animation: Background 25s ease infinite;
+    padding-top: 7%;
   }
   
   @-webkit-keyframes Background {
@@ -73,13 +75,13 @@ body {
   }
   
   .full-screen {
-    position: fixed;
+    position:fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background: url(https://i.imgur.com/wCG2csZ.png);
-    background-size: cover;
+    background-size: auto;
     background-position: center;
     width: 100%;
     height: 100%;
@@ -136,4 +138,12 @@ body {
   
   .button-line:hover {
     opacity: 1;
+  }
+
+  .page-footer {
+
+    position:fixed;
+    bottom: 0;
+    width:100%;
+    background-color: black !important;
   }
