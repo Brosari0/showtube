@@ -1,4 +1,6 @@
-* {}
+* {
+    /* height: 100vh; */
+}
 
 nav {
     border-bottom-left-radius: 20px;
@@ -110,7 +112,7 @@ h1 {
     text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.6);
 }
 
-h1:after {
+/* h1:after {
     display: block;
     color: #fff;
     letter-spacing: 1px;
@@ -118,7 +120,7 @@ h1:after {
     content: 'Subtitle goes here';
     font-size: 0.4em;
     text-align: center;
-}
+} */
 
 .button-line {
     font-family: 'Open Sans', sans-serif;
@@ -156,8 +158,6 @@ button {
 button > a {
     color: #e0f7fa;
    
-    
-
 }
 
 #commentbtn{
@@ -168,11 +168,14 @@ button > a {
     padding: 5px;
 }
 
-#posttitle{
+.posttitle{
 display: flex;
 justify-content: space-between;
 }
 
+.card-content {
+    margin: 25px 100px 5px 100px !important;
+}
 
 #toppost{
     display: flex;
@@ -185,7 +188,22 @@ justify-content: space-between;
     justify-content: flex-end;
 }
 
-tr:nth-child(even) {background-color: rgb(51, 77, 143)}
+/* tr:nth-child(1) {
+    background-color: #64b5f6;
+} */
+
+/* tr:nth-child(1) {
+    background-color: #1976d2;
+} */
+
+thead {
+    background-color: #7d9eb7;
+}
+
+tr:nth-child(even) {
+    background-color: #1976d2;
+}
+
 
 /* CSS */
 .button-85 {
@@ -249,3 +267,7 @@ tr:nth-child(even) {background-color: rgb(51, 77, 143)}
   top: 0;
   border-radius: 10px;
 }
+/* iframe {
+    justify-content: center;
+    align-items: center;
+} */

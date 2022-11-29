@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Videos</h1>
+<h1>Feed</h1>
 
 {% for post in posts %}
   <a href="{% url 'detail' post.id %}">
-    <div class="card">
+  <div class="row">
+    <div class="card" >
       <div class="card-content">
-        <span class="card-title">{{ post.title }}</span>
-        <p>user: {{ post.user }}</p>
-        <iframe width="560" height="315" src="{{ post.youtube_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p>Description: {{ post.description|linebreaks }}</p>
-        <div>{{ post.date }}</div>
+        <div class="card-title" class="posttitle">{{ post.title }}</div>
+        <div>{{ post.date }} | {{ post.user }}</div>
+        <iframe  width="560" height="315" src="{{ post.youtube_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>{{ post.description}}</p>
+      </div>
     </div>
 </div>
 </a>
