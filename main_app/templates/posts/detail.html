@@ -7,9 +7,10 @@
     
     
     {% if post.user == request.user %}
-    <a href="{% url 'post_update' post.id %}">Edit</a>
+    <br/>
+   <button class="button"><a href="{% url 'post_update' post.id %}">Edit</a></button>
    <span>|</span>
-    <a href="{% url 'post_delete' post.id %}">Delete</a>
+    <button><a href="{% url 'post_delete' post.id %}">Delete</a></button>
     {% endif %}
     <ul>
         {% for comment in comments %}
@@ -17,9 +18,9 @@
             {{ comment.content }}
             {% if comment.user == request.user %}
            
-            <a href="{% url 'comment_update' post.id comment.id %}">Edit</a>
+           <button><a href="{% url 'comment_update' post.id comment.id %}">Edit</a></button>
             <span>|</span>
-            <a href="{% url 'comment_delete' post.id comment.id %}">Delete</a>
+            <button><a href="{% url 'comment_delete' post.id comment.id %}">Delete</a></button>
             {% endif %}
         </li>
         {% endfor %}
