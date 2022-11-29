@@ -24,3 +24,4 @@ ShowTube is a clean and interactive social media platform centered around sharin
 - Implement a light/dark mode
 - Add Upvote/Downvote Functionality
 - Filter out inappropriate language in user added comments
+- Add channels
