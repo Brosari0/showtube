@@ -2,6 +2,7 @@
 
 # ShowTube
 ### *Created by Brennan, Kevin, Rosario, Will* 
+
 ShowTube is a clean and interactive social media platform centered around sharing your favorite videos. With an easy to navigate application we make it easy to share any video with your friends and family. 
 
 # Screenshots:
