@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="card">
-    <div class="card-content" id="toppost">
+    <div class="card-content"  id="toppost">
         <div class="card-title" class="posttitle">{{ post.title }}</div>
             {% if post.user == request.user %}
                 <div id="postbtn">
@@ -10,8 +10,12 @@
                   <button><a href="{% url 'post_delete' post.id %}">Delete</a></button>
                 </div>
             {% endif %}    
-        <iframe width="560" height="315" src="{{ post.youtube_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <p class="card-title" id="posttitle">{{ post.description}} &nbsp</p>
+           
+            <iframe width="560" height="315" src="{{ post.youtube_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          
+             <div id="detaildescription">
+            <p class="card-title">{{ post.description}} &nbsp</p>
+        </div>
     
     <table>
         <thead>
@@ -30,10 +34,12 @@
           {% endfor %}
         </tbody>
       </table>
-    <form action="{% url 'comment' post.id %}" method="POST">
+    <form action="{% url 'comment' post.id %}" method="POST" >
         {% csrf_token %}
-        <input id="content" type="text" name="content">
-        <input type="submit" value="Leave a comment">
+        <div id="leavecommentbtn">
+            <input id="content" type="text" name="content">
+            <input type="submit" id="leavecommentbtn" value="Leave a comment">
+        </div>
     </form>
   </div>
 </div>
