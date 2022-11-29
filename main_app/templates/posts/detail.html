@@ -1,30 +1,41 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="card">
-    <div class="card-content">
-    <div class="card-title">{{ post.title }}</div>
+    <div>
+    <div class="card-content" id="toppost">
+        <div class="card-title" id="posttitle">{{ post.title }}</div>
+            {% if post.user == request.user %}
+                <div id="postbtn">
+                <button class="button"><a href="{% url 'post_update' post.id %}">Edit</a></button>
+                <span>|</span>
+                <button><a href="{% url 'post_delete' post.id %}">Delete</a></button>
+                </div>
+            {% endif %}    
+            
     <iframe width="560" height="315" src="{{ post.youtube_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+   
+    <table>
+        <thead>
+          <tr><th>Comments</th><th id="commentbtn"></th></tr>
+        </thead>
+        <tbody>
+          {% for comment in comments %}
+            <tr>
+              <td>{{comment.content}}</td>
+              {% if comment.user == request.user %}
+              <td id="commentbtn"><button class="button-85"><a href="{% url 'comment_update' post.id comment.id %}">Edit</a></button>
+              <span>|</span>
+              <button class="button-85"><a href="{% url 'comment_delete' post.id comment.id %}">Delete</a></button>.      </td>
+            </tr>
+           {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
     
-    
-    {% if post.user == request.user %}
-    <br/>
-   <button class="button"><a href="{% url 'post_update' post.id %}">Edit</a></button>
-   <span>|</span>
-    <button><a href="{% url 'post_delete' post.id %}">Delete</a></button>
-    {% endif %}
-    <ul>
-        {% for comment in comments %}
-        <li>
-            {{ comment.content }}
-            {% if comment.user == request.user %}
-           
-           <button><a href="{% url 'comment_update' post.id comment.id %}">Edit</a></button>
-            <span>|</span>
-            <button><a href="{% url 'comment_delete' post.id comment.id %}">Delete</a></button>
-            {% endif %}
-        </li>
-        {% endfor %}
-    </ul>
+
+
     <form action="{% url 'comment' post.id %}" method="POST">
         {% csrf_token %}
         <input id="content" type="text" name="content">
