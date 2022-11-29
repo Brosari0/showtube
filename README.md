@@ -17,6 +17,10 @@ ShowTube is a clean and interactive social media platform centered around sharin
 <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
 <img src="https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio">
 
+# Pitch Deck
+[Pitch Deck](https://docs.google.com/presentation/d/19yr9EGcSU2UtOVKITeubRAUCP_0wvbSCQJDbDwj3-ho/edit?usp=sharing)
+
+
 
 # Future Enhancements 
 - View & Edit your profile
