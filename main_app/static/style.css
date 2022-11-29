@@ -1,16 +1,21 @@
 * {}
 
 nav {
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    overflow: hidden !important;
+   
 }
 
 .card {
     background-color: #a8d3dd !important;
     color: rgb(246, 245, 247);
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    border-radius: 2% !important;
+    border-radius: 10px !important;
 }
 
 nav ul a:hover {
@@ -145,9 +150,102 @@ h1:after {
     background-color: black !important;
 }
 button {
-    background-color: #1976d2;
+    background-color: #349c98;
+    border-radius: 6px;
 }
 button > a {
     color: #e0f7fa;
+   
+    
 
+}
+
+#commentbtn{
+    
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    padding: 5px;
+}
+
+#posttitle{
+display: flex;
+justify-content: space-between;
+}
+
+
+#toppost{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#postbtn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+tr:nth-child(even) {background-color: rgb(51, 77, 143)}
+
+/* CSS */
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+   
+    #48ff00,
+    #15544a,
+    #002bff,
+    #7a00ff
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #349c98;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
