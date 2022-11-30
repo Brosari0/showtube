@@ -5,6 +5,8 @@
 <img src ="https://i.imgur.com/Y89TniK.png">
 ShowTube is a clean and interactive social media platform centered around sharing your favorite videos. With an easy to navigate application we make it easy to share any video with your friends and family. 
 
+## [Try Out the App](https://showtube.herokuapp.com/)
+
 ## Screenshots:
 <img src="https://i.imgur.com/OjzsxOm.png">
 <img src="https://i.imgur.com/FDIosHj.png">
@@ -25,9 +27,13 @@ ShowTube is a clean and interactive social media platform centered around sharin
 ![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
 ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
 
-## Pitch Deck
-[Pitch Deck](https://docs.google.com/presentation/d/19yr9EGcSU2UtOVKITeubRAUCP_0wvbSCQJDbDwj3-ho/edit?usp=sharing)
-[Trello](https://trello.com/b/f2EDSbvE/let-team-6)
+## Getting Started: 
+- **[ShowTube Link](https://showtube.herokuapp.com/)**
+
+- **[Pitch Deck](https://docs.google.com/presentation/d/19yr9EGcSU2UtOVKITeubRAUCP_0wvbSCQJDbDwj3-ho/edit?usp=sharing)**
+
+- **[Trello Board](https://trello.com/b/f2EDSbvE/let-team-6)**
+
 
 ## Future Enhancements 
 - View & Edit your profile
