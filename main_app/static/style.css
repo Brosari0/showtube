@@ -218,6 +218,7 @@ thead {
 tr:nth-child(even) {
     background-color: #1976d2;
 }
+
 #userdate{
 display: flex;
 justify-content: end;

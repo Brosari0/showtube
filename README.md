@@ -14,8 +14,6 @@ ShowTube is a clean and interactive social media platform centered around sharin
 
 <br>
 
-
-
 ## Screenshots:
 <img src="https://i.imgur.com/Q4hPBX7.png">
 <img src="url to your image on imgur">
