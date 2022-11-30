@@ -78,11 +78,14 @@ def posts_index(request):
 
 def posts_detail(request, post_id):
     post = Post.objects.get(id=post_id)
+    id_list = post.reactions.all().values_list('id')
+    reactions_post_doesnt_have = Reaction.objects.exclude(id__in=id_list)
     comments = Comment.objects.filter(post_id=post_id)
     post.youtube_url = post.youtube_url.replace('watch?v=', 'embed/')
     return render(request, 'posts/detail.html', {
         'post': post,
-        'comments': comments
+        'comments': comments,
+        'reactions': reactions_post_doesnt_have
     })
 
 
@@ -103,3 +106,13 @@ class ReactionUpdate(LoginRequiredMixin, UpdateView):
 class ReactionDelete(LoginRequiredMixin, DeleteView):
     model = Reaction
     success_url = '/reactions'
+
+@login_required
+def attach_reaction(request, post_id, reaction_id):
+    Post.objects.get(id=post_id).reactions.add(reaction_id)
+    return redirect('detail', post_id=post_id)
+
+@login_required
+def dettach_reaction(request, post_id, reaction_id):
+    Post.objects.get(id=post_id).reactions.remove(reaction_id)
+    return redirect('detail', post_id=post_id)
