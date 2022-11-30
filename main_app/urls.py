@@ -12,6 +12,8 @@ urlpatterns = [
     path('posts/<int:post_id>/comment/', views.add_comment, name='comment'),
     path('posts/<int:post_id>/update/<int:pk>/', views.CommentUpdate.as_view(), name='comment_update'),
     path('posts/<int:post>/delete/<int:pk>/', views.CommentDelete.as_view(), name='comment_delete'),
+    path('posts/<int:post_id>/attach_reaction/<int:reaction_id>/', views.attach_reaction, name="attach_reaction"),
+    path('posts/<int:post_id>/dettach_reaction/<int:reaction_id>/', views.dettach_reaction, name="dettach_reaction"),
     
     path('reactions/', views.ReactionList.as_view(), name='reactions_index'),
     path('reactions/<int:pk>/', views.ReactionDetail.as_view(), name='reactions_detail'),

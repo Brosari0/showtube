@@ -15,7 +15,32 @@
             allowfullscreen></iframe>
         <div id="detaildescription">
             <p class="card-title">{{ post.description}} &nbsp</p>
+            {% if post.reactions.count %}
+                {% for reaction in post.reactions.all %}
+                <span><img src="{{ reaction.url }}" alt="Couldn't load 😢"></span>
+                <form action="{% url 'dettach_reaction' post.id reaction.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn">Remove</button>
+                </form>
+                {% endfor %}
+            {% else %}
+                <h5>No Reactions Yet!</h5>
+            {% endif %}
         </div>
+        <aside>
+            <h3>Available Reactions!</h3>
+            {% if reactions.count %}
+                {% for reaction in reactions.all %}
+                <img src="{{ reaction.url }}" alt="Couldn't load 😢">
+                <form action="{% url 'attach_reaction' post.id reaction.id %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" class="btn">Add</button>
+                </form>
+                {% endfor %}
+            {% else %}
+            <h3>Post already has all reactions!</h3>
+            {% endif %}
+        </aside>
         <table>
             <thead>
                 <tr>
