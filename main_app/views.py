@@ -1,5 +1,5 @@
 import requests
-import json, os
+import json, os, re
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
@@ -84,6 +84,7 @@ def posts_detail(request, post_id):
         'post': post,
         'comments': comments
     })
+
 
 class ReactionList(ListView):
     model = Reaction

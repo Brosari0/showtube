@@ -1,5 +1,4 @@
 * {
-    /* height: 100vh; */
     font-family: 'Lato', sans-serif;
     color: black;
 }
@@ -121,16 +120,6 @@ h1 {
     justify-content: center;
 }
 
-/* h1:after {
-    display: block;
-    color: #fff;
-    letter-spacing: 1px;
-    font-family: 'Poiret One', sans-serif;
-    content: 'Subtitle goes here';
-    font-size: 0.4em;
-    text-align: center;
-} */
-
 .button-line {
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
@@ -154,11 +143,10 @@ h1 {
 }
 
 .page-footer {
-
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: black !important;
+    background-color: #1797d2 !important;
 }
 button {
     background-color: #349c98;
@@ -210,16 +198,6 @@ justify-content: center;
     
 }
 
-
-
-/* tr:nth-child(1) {
-    background-color: #64b5f6;
-} */
-
-/* tr:nth-child(1) {
-    background-color: #1976d2;
-} */
-
 thead {
     background-color: #7d9eb7;
 }
@@ -242,7 +220,6 @@ padding-bottom: 15px;
 
 }
 
-/* CSS */
 .button-85 {
   padding: 0.6em 2em;
   border: none;
@@ -304,10 +281,6 @@ padding-bottom: 15px;
   top: 0;
   border-radius: 10px;
 }
-/* iframe {
-    justify-content: center;
-    align-items: center;
-} */
 
 
   
