@@ -1,15 +1,28 @@
-
+<section id="header">
+  <div align="center" id="header">
 
 # ShowTube
 ### *Created by Brennan, Kevin, Rosario, Will* 
-
 ShowTube is a clean and interactive social media platform centered around sharing your favorite videos. With an easy to navigate application we make it easy to share any video with your friends and family. 
 
+ </div>
+<br>
+
+## Check Out Our Site!
+
+**[ShowTube](https://showtube.herokuapp.com/)**
+
+<br>
+
+
+
 ## Screenshots:
+<img src="https://i.imgur.com/Q4hPBX7.png">
 <img src="url to your image on imgur">
 <img src="url to your image on imgur">
 <img src="url to your image on imgur">
-<img src="url to your image on imgur">
+
+<br>
 
 ## Technologies Used: 
 ![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python)
@@ -23,8 +36,12 @@ ShowTube is a clean and interactive social media platform centered around sharin
 ![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
 ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
 
+<br>
+
 ## Pitch Deck
 [Pitch Deck](https://docs.google.com/presentation/d/19yr9EGcSU2UtOVKITeubRAUCP_0wvbSCQJDbDwj3-ho/edit?usp=sharing)
+
+<br>
 
 ## Future Enhancements 
 - View & Edit your profile
@@ -34,6 +51,9 @@ ShowTube is a clean and interactive social media platform centered around sharin
 - Filter out inappropriate language in user added comments
 - Add channels
 
+<br>
 
 ## Additional Resources / Inspiration
 Inspiration for our home page was drawn from [this CodePen](https://codepen.io/KaioRocha/pen/YoEVvZ) by [Kaio Almeida](https://codepen.io/KaioRocha).
+
+</section>
