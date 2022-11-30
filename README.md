@@ -2,14 +2,16 @@
 
 # ShowTube
 ### *Created by Brennan, Kevin, Rosario, Will* 
-
+<img src ="https://i.imgur.com/Y89TniK.png">
 ShowTube is a clean and interactive social media platform centered around sharing your favorite videos. With an easy to navigate application we make it easy to share any video with your friends and family. 
 
 ## Screenshots:
-<img src="url to your image on imgur">
-<img src="url to your image on imgur">
-<img src="url to your image on imgur">
-<img src="url to your image on imgur">
+<img src="https://i.imgur.com/OjzsxOm.png">
+<img src="https://i.imgur.com/FDIosHj.png">
+<img src="https://i.imgur.com/9tbWtu6.png">
+<img src="https://i.imgur.com/L3t2S09.png">
+<img src="https://i.imgur.com/j3fprFT.png09.png">
+<img src="https://i.imgur.com/jFjmZkS.png">
 
 ## Technologies Used: 
 ![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python)
@@ -36,4 +38,4 @@ ShowTube is a clean and interactive social media platform centered around sharin
 
 
 ## Additional Resources / Inspiration
-Inspiration for our home page was drawn from [this CodePen](https://codepen.io/KaioRocha/pen/YoEVvZ) by [Kaio Almeida](https://codepen.io/KaioRocha).
+Inspiration for our home page was drawn from [This CodePen](https://codepen.io/KaioRocha/pen/YoEVvZ) by [Kaio Almeida](https://codepen.io/KaioRocha).

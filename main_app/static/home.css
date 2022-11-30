@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -48,10 +47,10 @@ html {
 h1 {
   color: #fff;
   font-size: 40px;
-  -webkit-animation: mainFadeIn 2s forwards;
-  -o-animation: mainFadeIn 2s forwards;
-  animation: mainFadeIn 2s forwards;
-  animation-delay: 1.6s;
+  -webkit-animation: mainFadeIn .5s forwards;
+  -o-animation: mainFadeIn .5s forwards;
+  animation: mainFadeIn .5s forwards;
+  animation-delay: .5s;
   opacity: 0;
   display: flex;
   align-items: baseline;
@@ -90,13 +89,13 @@ h1>span {
   background: #1976d2;
   position: absolute;
   animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
-  animation-delay: 2s;
+  animation-delay: 1s;
   display: flex;
 }
 
 p {
-  animation: secFadeIn 2s forwards;
-  animation-delay: 2s;
+  animation: secFadeIn 1s forwards;
+  animation-delay: 1s;
   opacity: 0;
   font-weight: 400;
   font-family: 'Lato';
@@ -107,11 +106,11 @@ p {
 }
 
 button {
-  background-color: #10a7ff;
+  background-color: #1797d2;
   border: none;
   color: white;
-  animation-timing-function: 1s;
-  animation: secFadeIn2 2s, 4;
+  animation-timing-function: 2s;
+  animation: secFadeIn2 4s; 
 }
 
 a {
@@ -120,21 +119,15 @@ a {
   animation: secFadeIn2 4s;
 }
 
-.container2 {
-  animation: secFadeIn2 6s;
-}
-
 @keyframes mainBlock {
   0% {
     width: 0%;
     left: 0;
   }
-
   50% {
     width: 100%;
     left: 0;
   }
-
   100% {
     width: 0;
     left: 100%;
@@ -146,12 +139,10 @@ a {
     width: 0%;
     left: 0;
   }
-
   50% {
     width: 100%;
     left: 0;
   }
-
   100% {
     width: 0;
     left: 100%;
@@ -162,7 +153,6 @@ a {
   0% {
     opacity: 0;
   }
-  
   100% {
     opacity: 1;
   }
@@ -174,7 +164,6 @@ a {
     width: 0px;
     height: 0px;
     background: #0a548d;
-    ;
     border: 0px solid #ddd;
     opacity: 0;
   }
@@ -183,7 +172,6 @@ a {
     width: 10px;
     height: 10px;
     background: #0a548d;
-    ;
     opacity: 1;
     bottom: 45px;
   }
@@ -225,8 +213,37 @@ a {
   0% {
     opacity: 0;
   }
-
-  100% {
-    opacity: 0.5;
+  25% {
+    opacity: 0.0;
   }
+  75% {
+    opacity:0.1
+  
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+.container2 { 
+  margin-left: 40%;
+  transform: translateX(-200%);
+	opacity: 0.5;
+	animation: slide-in-anim 3.5s ease-in-out forwards;
+}
+
+@keyframes slide-in-anim {
+	20% {
+		opacity: 0.5;
+	}
+	60% {
+		transform: translateX(-42%);
+	}
+	75% {
+		transform: translateX(-52%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(-50%);
+	}
 }
