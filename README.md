@@ -27,6 +27,7 @@ ShowTube is a clean and interactive social media platform centered around sharin
 
 ## Pitch Deck
 [Pitch Deck](https://docs.google.com/presentation/d/19yr9EGcSU2UtOVKITeubRAUCP_0wvbSCQJDbDwj3-ho/edit?usp=sharing)
+[Trello](https://trello.com/b/f2EDSbvE/let-team-6)
 
 ## Future Enhancements 
 - View & Edit your profile
