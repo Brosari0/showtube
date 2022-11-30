@@ -2,9 +2,9 @@
 {% block content %}
 
 
-  <h1>Add Comment</h1>
+  <h1>Edit Comment</h1>
 
-<form action="" method="POST">
+<form action="" method="POST" id="commentform">
     {% csrf_token %}
     <table>
         {{form.as_table}}

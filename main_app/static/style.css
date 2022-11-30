@@ -170,12 +170,15 @@ button > a {
 
 .posttitle{
 display: flex;
-justify-content: space-between;
+justify-content: center;
+
+
+}
+#detaildescription{
+    margin: 15px;
+
 }
 
-.card-content {
-    margin: 25px 100px 5px 100px !important;
-}
 
 #toppost{
     display: flex;
@@ -186,7 +189,19 @@ justify-content: space-between;
 #postbtn{
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 20px;
 }
+
+#leavecommentbtn{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
 
 /* tr:nth-child(1) {
     background-color: #64b5f6;
@@ -203,7 +218,19 @@ thead {
 tr:nth-child(even) {
     background-color: #1976d2;
 }
+#userdate{
+display: flex;
+justify-content: end;
+padding-right: 10px;
+padding-bottom: 15px;
+}
 
+#indexvid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 
 /* CSS */
 .button-85 {
