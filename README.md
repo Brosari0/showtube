@@ -1,4 +1,5 @@
-
+<section id="header">
+  <div align="center" id="header">
 
 # ShowTube
 ### *Created by Brennan, Kevin, Rosario, Will* 
@@ -14,6 +15,8 @@ ShowTube is a clean and interactive social media platform centered around sharin
 <img src="https://i.imgur.com/L3t2S09.png">
 <img src="https://i.imgur.com/j3fprFT.png09.png">
 <img src="https://i.imgur.com/jFjmZkS.png">
+
+<br>
 
 ## Technologies Used: 
 ![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python)
@@ -43,6 +46,9 @@ ShowTube is a clean and interactive social media platform centered around sharin
 - Filter out inappropriate language in user added comments
 - Add channels
 
+<br>
 
 ## Additional Resources / Inspiration
 Inspiration for our home page was drawn from [This CodePen](https://codepen.io/KaioRocha/pen/YoEVvZ) by [Kaio Almeida](https://codepen.io/KaioRocha).
+
+</section>
