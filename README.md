@@ -10,7 +10,7 @@ ShowTube is a clean and interactive social media platform centered around sharin
 
 ## Check Out Our Site!
 
-**[ShowTube](https://showtube.herokuapp.com/)**
+
 
 <br>
 
@@ -36,10 +36,17 @@ ShowTube is a clean and interactive social media platform centered around sharin
 
 <br>
 
-## Pitch Deck
-[Pitch Deck](https://docs.google.com/presentation/d/19yr9EGcSU2UtOVKITeubRAUCP_0wvbSCQJDbDwj3-ho/edit?usp=sharing)
+## Getting Started: 
+- **[ShowTube Link](https://showtube.herokuapp.com/)**
+
+- **[Pitch Deck](https://docs.google.com/presentation/d/19yr9EGcSU2UtOVKITeubRAUCP_0wvbSCQJDbDwj3-ho/edit?usp=sharing)**
+
+- **[Trello Board](https://trello.com/b/f2EDSbvE/let-team-6)**
 
 <br>
+
+
+
 
 ## Future Enhancements 
 - View & Edit your profile
