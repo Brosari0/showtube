@@ -1,15 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-
 <h1>Reactions</h1>
-
 {% for reaction in reaction_list %}
-  <a href="{% url 'reactions_detail' reaction.id %}">
-    <div class="card">
-        <img src="{{ reaction.url }}" alt="Could not display">
-    </div>
-</div>
+<a href="{% url 'reactions_detail' reaction.id %}">
+  <div class="card">
+    <img src="{{ reaction.url }}" alt="Could not display">
+  </div>
+  </div>
 </a>
 {% endfor %}
-
 {% endblock %}

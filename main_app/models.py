@@ -4,14 +4,13 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import datetime
 
-
 # Create your models here.
 class Reaction(models.Model):
     url = models.CharField(max_length=500)
-
+    
     def __str__(self):
         return self.url
-    
+
     def get_absolute_url(self):
         return reverse('reactions_detail', kwargs={'pk': self.id})
 

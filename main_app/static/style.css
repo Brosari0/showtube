@@ -1,5 +1,7 @@
 * {
     /* height: 100vh; */
+    font-family: 'Lato', sans-serif;
+    color: black;
 }
 
 nav {
@@ -104,12 +106,19 @@ body {
 
 h1 {
     color: #fff;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     font-size: 4em;
     letter-spacing: -2px;
     text-align: center;
     text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.6);
+}
+
+#indexdes{
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 /* h1:after {

@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,9 @@
     <title>Show Tube</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=EB+Garamond&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=EB+Garamond&family=Lato&family=Source+Code+Pro&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -20,35 +21,34 @@
             <div class="nav-wrapper">
                 <a href="{% url 'index' %}">
                     <div class="brand-logo center" id="logo">
-                        <span class="cyan-text text-lighten-5">Show</span><span class="blue-text text-darken-2">Tube</span>
-                        
+                        <span class="cyan-text text-lighten-5">Show</span><span
+                            class="blue-text text-darken-2">Tube</span>
                     </div>
                 </a>
-            <ul>
-               
-                {% if user.is_authenticated %}
-                <div class="right hide-on-med-and-down">
-                <li><a href="{% url 'create_post' %}">Create Post</a></li>
-                <li><a href="{% url 'reactions_index' %}">View All Reactions</a></li>
-                <li><a href="{% url 'create_reaction' %}">Create Reactions</a></li>
-                </div>
-                <li><a href="{% url 'logout' %}">Log Out</a></li>
-                {% else %}
-                <li><a href="{% url 'login' %}">Log In</a></li>
-                <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                {% endif %}
-            </ul>
-        </div>
+                <ul>
+                    {% if user.is_authenticated %}
+                    <div class="right hide-on-med-and-down">
+                        <li><a href="{% url 'create_post' %}">Create Post</a></li>
+                        <li><a href="{% url 'reactions_index' %}">View All Reactions</a></li>
+                        <li><a href="{% url 'create_reaction' %}">Create Reactions</a></li>
+                    </div>
+                    <li><a href="{% url 'logout' %}">Log Out</a></li>
+                    {% else %}
+                    <li><a href="{% url 'login' %}">Log In</a></li>
+                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                    {% endif %}
+                </ul>
+            </div>
         </nav>
     </header>
     <main class="container">
         {% block content %}
-        {% endblock %}     
+        {% endblock %}
     </main>
 </body>
 <footer class="page-footer">
     <div class="center-align">
-    © 2022 All Rights Reserved by Let Team = 6
+        © 2022 All Rights Reserved by Let Team = 6
     </div>
 </footer>
 </html>
