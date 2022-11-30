@@ -4,6 +4,7 @@
 # ShowTube
 ### *Created by Brennan, Kevin, Rosario, Will* 
 <img src ="https://i.imgur.com/Y89TniK.png">
+<br>
 ShowTube is a clean and interactive social media platform centered around sharing your favorite videos. With an easy to navigate application we make it easy to share any video with your friends and family. 
 
 ## [Try Out the App](https://showtube.herokuapp.com/)

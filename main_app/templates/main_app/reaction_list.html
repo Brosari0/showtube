@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Reactions</h1>
+<p class="center-align">'Reactions' will be implemented soon! Feel free to add a reaction in the mean time. Stay tuned for future enhancements. </p>
 {% for reaction in reaction_list %}
 <a href="{% url 'reactions_detail' reaction.id %}">
   <div class="card">
