@@ -1,9 +1,13 @@
-
+<section id="header">
+  <div align="center" id="header">
 
 # ShowTube
 ### *Created by Brennan, Kevin, Rosario, Will* 
 <img src ="https://i.imgur.com/Y89TniK.png">
+<br>
 ShowTube is a clean and interactive social media platform centered around sharing your favorite videos. With an easy to navigate application we make it easy to share any video with your friends and family. 
+
+## [Try Out the App](https://showtube.herokuapp.com/)
 
 ## Screenshots:
 <img src="https://i.imgur.com/OjzsxOm.png">
@@ -12,6 +16,8 @@ ShowTube is a clean and interactive social media platform centered around sharin
 <img src="https://i.imgur.com/L3t2S09.png">
 <img src="https://i.imgur.com/j3fprFT.png09.png">
 <img src="https://i.imgur.com/jFjmZkS.png">
+
+<br>
 
 ## Technologies Used: 
 ![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python)
@@ -25,9 +31,13 @@ ShowTube is a clean and interactive social media platform centered around sharin
 ![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
 ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
 
-## Pitch Deck
-[Pitch Deck](https://docs.google.com/presentation/d/19yr9EGcSU2UtOVKITeubRAUCP_0wvbSCQJDbDwj3-ho/edit?usp=sharing)
-[Trello](https://trello.com/b/f2EDSbvE/let-team-6)
+## Getting Started: 
+- **[ShowTube Link](https://showtube.herokuapp.com/)**
+
+- **[Pitch Deck](https://docs.google.com/presentation/d/19yr9EGcSU2UtOVKITeubRAUCP_0wvbSCQJDbDwj3-ho/edit?usp=sharing)**
+
+- **[Trello Board](https://trello.com/b/f2EDSbvE/let-team-6)**
+
 
 ## Future Enhancements 
 - View & Edit your profile
@@ -37,6 +47,9 @@ ShowTube is a clean and interactive social media platform centered around sharin
 - Filter out inappropriate language in user added comments
 - Add channels
 
+<br>
 
 ## Additional Resources / Inspiration
 Inspiration for our home page was drawn from [This CodePen](https://codepen.io/KaioRocha/pen/YoEVvZ) by [Kaio Almeida](https://codepen.io/KaioRocha).
+
+</section>
