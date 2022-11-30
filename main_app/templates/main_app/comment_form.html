@@ -1,15 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-
-
-  <h1>Edit Comment</h1>
-
+<h1>Edit Comment</h1>
 <form action="" method="POST" id="commentform">
-    {% csrf_token %}
-    <table>
-        {{form.as_table}}
-    </table>
-    <input type="submit" value="submit" class="btn">
+  {% csrf_token %}
+  <table>
+    {{form.as_table}}
+  </table>
+  <input type="submit" value="submit" class="btn">
 </form>
 
 {% endblock %}
