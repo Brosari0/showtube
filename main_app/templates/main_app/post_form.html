@@ -1,17 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-
-
-  <h1>Add Post</h1>
+<h1>Add Post</h1>
 <div class="card">
-  <div class="card-content" id="toppost" >
-<form action="" method="POST">
-    {% csrf_token %}
-    <ul>
-      {{form.as_ul}}
-    </ul>
-    <input type="submit" value="submit" class="btn">
-</form>
-</div>
+  <div class="card-content" id="toppost">
+    <form action="" method="POST">
+      {% csrf_token %}
+      <ul>
+        {{form.as_ul}}
+      </ul>
+      <input type="submit" value="submit" class="btn">
+    </form>
+  </div>
 </div>
 {% endblock %}
