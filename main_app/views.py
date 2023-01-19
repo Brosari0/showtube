@@ -113,6 +113,6 @@ def attach_reaction(request, post_id, reaction_id):
     return redirect('detail', post_id=post_id)
 
 @login_required
-def dettach_reaction(request, post_id, reaction_id):
+def detach_reaction(request, post_id, reaction_id):
     Post.objects.get(id=post_id).reactions.remove(reaction_id)
     return redirect('detail', post_id=post_id)

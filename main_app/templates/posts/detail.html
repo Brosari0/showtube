@@ -18,7 +18,7 @@
             {% if post.reactions.count %}
                 {% for reaction in post.reactions.all %}
                 <span><img src="{{ reaction.url }}" alt="Couldn't load 😢"></span>
-                <form action="{% url 'dettach_reaction' post.id reaction.id %}">
+                <form action="{% url 'detach_reaction' post.id reaction.id %}">
                     {% csrf_token %}
                     <button type="submit" class="btn">Remove</button>
                 </form>
